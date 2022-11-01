@@ -2,15 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Aside = styled.aside`
-  padding: 10px;
   flex: 2;
+  padding: 10px;
 `;
 const OrderWrapper = styled.div`
   background-color: #fff;
   border: 0.05rem solid #fff;
-  color: var(--primary-alpha);
+  color: rgba(2, 29, 73, 0.5);
   border-radius: 6px;
-  padding: 3.2rem 1.6rem;
+  padding: 50px 10px;
   text-align: center;
 `;
 const Title = styled.div`
