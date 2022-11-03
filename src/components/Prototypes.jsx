@@ -163,10 +163,6 @@ const A = styled.a`
   }
 `;
 
-const PrototypeBody = styled.div`
-
-`;
-
 const Video = styled.video`
   width: 100%;
   opacity: 1;
@@ -184,6 +180,11 @@ const Botton = styled.div`
   height: 25px;
   padding: 2px 6px;
   float: right !important;
+
+  &:hover {
+    color: #021d49;
+    background: #ff4d4f;
+  }
 `;
 
 const Title = styled.div`
@@ -235,7 +236,7 @@ const Prototypes = () => {
               </div>
             </A>
 
-            <PrototypeBody>
+            <div>
               <Title>
                 <Botton>
                   <div class="material-icons">add</div>
@@ -244,7 +245,7 @@ const Prototypes = () => {
               </Title>
               <Price>$ {price}</Price>
               <Description>{desc}</Description>
-            </PrototypeBody>
+            </div>
           </Prototype>
         );
 
