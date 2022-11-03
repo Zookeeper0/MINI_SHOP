@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import React, { useState } from "react";
 import AppStateContext from "../contexts/AppStateContext";
 
 const AppStateProvider = ({ children }) => {
@@ -137,7 +137,7 @@ const AppStateProvider = ({ children }) => {
   ]);
   const [orders, setOrders] = useState([]);
 
-  const addToOrder = (id) => {
+  const addToOrder = () => {
   };
 
   const remove = () => {

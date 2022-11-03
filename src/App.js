@@ -1,8 +1,10 @@
+import React from "react";
 import styled from "styled-components";
 import Order from "./components/Order";
 import Prototypes from "./components/Prototypes";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
+import AppStateProvider from "./providers/AppStateProvider";
 
 const Container = styled.div`
   margin-left: auto;
@@ -22,14 +24,14 @@ const Container = styled.div`
 
 function App() {
   return (
-    <>
+    <AppStateProvider>
       <Header />
       <Container>
         <Prototypes />
         <Order />
       </Container>
       <Footer />
-    </>
+    </AppStateProvider>
   );
 }
 
