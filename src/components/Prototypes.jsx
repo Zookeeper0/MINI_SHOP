@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import AppStateContext from '../contexts/AppStateContext';
+import usePrototypes from '../hooks/usePrototypes';
 
 const Main = styled.main`
   padding: 8px;
@@ -77,13 +78,19 @@ const Description = styled.p`
 
 const Prototypes = () => {
   
-  const {prototypes} = useContext(AppStateContext);
-
+  const prototypes = usePrototypes();
+  const { addToOrder } = useContext(AppStateContext);
+  
   return (
     <Main>
       <PrototypesMain>
         {prototypes.map((prototype) => {
         const {id, thumbnail, title, price , desc, pieUrl} = prototype;
+
+        const clickhadler = () => {
+          addToOrder(id);
+        }
+
         return (
           <Prototype key={id}>
             <A href={pieUrl} target="_BLANK" rel="noreferrer">
@@ -107,7 +114,7 @@ const Prototypes = () => {
 
             <div>
               <Title>
-                <Botton>
+                <Botton onClick={clickhadler}>
                   <div class="material-icons">add</div>
                 </Botton>
                 {title}

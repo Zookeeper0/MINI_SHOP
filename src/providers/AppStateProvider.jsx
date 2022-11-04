@@ -137,7 +137,8 @@ const AppStateProvider = ({ children }) => {
   ]);
   const [orders, setOrders] = useState([]);
 
-  const addToOrder = () => {
+  const addToOrder = (id) => {
+    console.log(id)
   };
 
   const remove = () => {
