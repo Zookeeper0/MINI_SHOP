@@ -5,7 +5,7 @@ const Base = styled.footer`
   padding: 30px;
   text-align: right;
   font-size: 14px;
-  background-color: orange;
+  background-color: #fff;
 `;
 
 

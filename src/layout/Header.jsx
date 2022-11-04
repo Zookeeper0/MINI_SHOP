@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Main = styled.header`
   padding: 10px;
   text-align: center;
-  background-color: royalblue;
+  background-color: #fff;
 `;
 const HeadContainer = styled.div`
   margin: 40px auto;

@@ -138,14 +138,37 @@ const AppStateProvider = ({ children }) => {
   const [orders, setOrders] = useState([]);
 
   const addToOrder = (id) => {
-    console.log(id)
+    setOrders((orders) => {
+      //orders안에 추가한 상품이 이미 있는지 판단 exist 변수에 상태저장
+      const exist = orders.find(order => order.id === id);
+
+      // 상태가 undefined 라면 상품이 없는 상태이므로 orders에 
+      // 담겨있던 상품( ...orders) + 담을 상품 id와 개수( quantity ) 추가해서 저장 
+      if( exist === undefined){
+        return [...orders, {id, quantity: 1}];
+      } else {
+        return orders.map((order) => {
+          if (order.id === id) {
+            return {
+              id,
+              quantity: order.quantity + 1,
+            };
+          } else {
+            return order;
+          }
+        });
+      }
+
+
+    })
   };
 
   const remove = () => {
+    console.log("remove!!")
   };
 
   const removeAll = () => {
-
+    console.log("removeAll!!")
   };
 
   return (

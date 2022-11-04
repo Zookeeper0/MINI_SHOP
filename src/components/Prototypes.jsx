@@ -36,7 +36,7 @@ const Video = styled.video`
   transition: opacity 0.3s ease-in-out;
 `;
 
-const Botton = styled.div`
+const Button = styled.div`
   background: #021d49;
   color:#fff;
   cursor:pointer;
@@ -47,7 +47,7 @@ const Botton = styled.div`
   height: 25px;
   padding: 2px 6px;
   float: right !important;
-
+  outline:none;
   &:hover {
     color: #021d49;
     background: #ff4d4f;
@@ -103,20 +103,16 @@ const Prototypes = () => {
                   autoPlay
                   loop
                   playsInline
-                  className="prototype__artwork prototype__edit"
                   src={thumbnail}
-                  style={{
-                    objectFit: "contain",
-                  }}
                 />
               </div>
             </A>
 
             <div>
               <Title>
-                <Botton onClick={clickhadler}>
+                <Button onClick={clickhadler}>
                   <div class="material-icons">add</div>
-                </Botton>
+                </Button>
                 {title}
               </Title>
               <Price>$ {price}</Price>
